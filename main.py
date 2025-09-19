@@ -11,13 +11,13 @@ def main():
         book = get_book_text(sys.argv[1])
         count_words = words_count(book)
         count_char = character_counter(book)
+        alph = key_value(count_char)
+        # print düzeni
         print("============ BOOKBOT ============")
         print("Analyzing book found at books/frankenstein.txt...")
         print("----------- Word Count ----------")
         print(f"Found {count_words} total words")
         print("--------- Character Count -------")
-        #print(count_char)
-        alph = key_value(count_char)
         for result in alph:
             if result["char"].isalpha():
                 print(f"{result["char"]}: {result["num"]}")
